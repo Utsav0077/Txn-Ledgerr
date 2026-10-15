@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Database files
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite3
+
+# Build files
+dist/
+frontend/dist/
+# Local test credentials
+/userA.json
+/userB.json
+
+# Authentication and debugging scripts
+/login_users.js
+/register_users.js
+/test_login.js
+/test_register.js
+/seed_funds.js
+/seed_funds_v2.js
+/seed_funds_v3.js
+/debug_*.js
+
+# Local database and secret files
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+
+# Duplicate project folder
+/Txn-Ledger-Original/
+# Local debugging scripts
+/check_balances.js
+/create_accounts.js

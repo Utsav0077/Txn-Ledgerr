@@ -1,0 +1,31 @@
+.globe-container {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: -100px;
+  right: 0; /* Align directly to the right edge */
+  /* Very subtle gray/white wireframe */
+  color: #94a3b8;
+  opacity: 0.6;
+}
+
+.globe-svg {
+  width: 100%;
+  height: 100%;
+  /* Extremely slow, subtle rotation */
+  animation: rotateGlobe 60s linear infinite;
+  /* Shift to only show the right 60% */
+  transform: translateX(40%);
+}
+
+@keyframes rotateGlobe {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .globe-svg {
+    animation: none;
+  }
+}

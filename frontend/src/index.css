@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono');
+}
+
+:root {
+  --bg: #0a0a0b;
+  --bg-raised: #111214;
+  --border: #212226;
+  --border-strong: #2c2d32;
+  --text: #e9e7e2;
+  --text-dim: #86888f;
+  --text-faint: #55565c;
+  --blue: #5b7fff;
+  --blue-dim: #5b7fff33;
+  --green: #22c55e;
+  --green-dim: #22c55e26;
+  --amber: #f2a93b;
+  --amber-dim: #f2a93b26;
+  --red: #ef4d5a;
+  --red-dim: #ef4d5a26;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.scanline-dot {
+  box-shadow: 0 0 8px 1px currentColor;
+}
+
+::selection {
+  background: var(--blue-dim);
+  color: var(--text);
+}
+
+* {
+  scrollbar-color: var(--border-strong) transparent;
+}

@@ -1,0 +1,36 @@
+.network-globe-container {
+  width: 250px; /* Half of 500px */
+  height: 500px;
+  position: relative;
+  color: #3b82f6; /* Blueish color */
+  overflow: hidden;
+  /* Remove clip-path, use container width to clip */
+}
+
+.globe-svg {
+  width: 500px;
+  height: 500px;
+  animation: rotate 20s linear infinite;
+  /* Shift left to show only the right half */
+  position: absolute;
+  top: 0;
+  left: -250px;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wireframe-lines {
+  stroke-dasharray: 2, 4;
+}
+
+.particles circle {
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
